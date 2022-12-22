@@ -1,7 +1,12 @@
-import styled from "styled-components";
-import tw from "twin.macro";
+import styled, { css } from 'styled-components';
+import tw from 'twin.macro';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
+import { SCREEN } from '../../containers/responsive';
 
 export const CardContainer = styled.div`
+    box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.4);
+    min-height: 4.3em;
     ${tw`
         flex
         justify-center
@@ -14,14 +19,15 @@ export const CardContainer = styled.div`
         pl-2
         md:pt-2
         md:pb-2
-        md:pl-6
-        md:pr-6
+        md:pl-9
+        md:pr-9
     `}
 `;
 
 export const ItemContainer = styled.div`
     ${tw`
         flex
+        relative
     `}
 `;
 
@@ -36,11 +42,25 @@ export const Icon = styled.span`
     `}
 `;
 
+export const SmallIcon = styled.span`
+    ${tw`
+        text-gray-500
+        fill-current
+        text-xs
+        md:text-base
+        mr-1
+        ml-2
+        md:mr-3
+    `}
+`;
+
 export const Name = styled.span`
     ${tw`
         text-gray-600
         text-xs
         md:text-sm
+        cursor-pointer
+        select-none
     `}
 `;
 
@@ -56,3 +76,22 @@ export const LineSeparator = styled.span`
 
     `}
 `;
+
+export const DateCalendar = styled(Calendar)`
+    position: absolute;
+    max-width: none;
+    user-select: none;
+    left: 0;
+
+    ${({offset}: any) => offset && css`
+        left: -6em;
+    `}
+    @media(min-width: ${SCREEN.md}) {
+        top: 4em;
+        left: -2em;
+    }
+    @media(min-width: ${SCREEN.sm}) {
+        top: 250px;
+        left: -2em;
+    }
+` as any;
