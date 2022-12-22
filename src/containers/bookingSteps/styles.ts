@@ -38,8 +38,8 @@ export const StepContainer = styled.div`
   ${tw`
     flex
     flex-col
-    w-16
     md:w-96
+    m-3
     items-center
     transition-colors
     hover:text-red-500
