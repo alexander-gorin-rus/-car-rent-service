@@ -1,28 +1,32 @@
-import React, { useState } from 'react'
-import { CardContainer, DateCalendar, Icon, ItemContainer, LineSeparator, Name, SmallIcon } from './styles'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCalendarAlt } from '@fortawesome/free-regular-svg-icons'
-import { Marginer } from '../marginer'
-import Button from '../button'
-import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons'
+import React, {useState} from 'react';
+import {CardContainer, DateCalendar, Icon, ItemContainer, LineSeparator, Name, SmallIcon} from './styles';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCalendarAlt} from '@fortawesome/free-regular-svg-icons';
+import {Marginer} from '../marginer';
+import Button from '../button';
+import {faCaretDown, faCaretUp} from '@fortawesome/free-solid-svg-icons';
 
 const BookCard = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [isStartCalendarOpen, setStartCalendarOpen] = useState(false);
   const [returnDate, setReturnDate] = useState(new Date());
   const [isReturnCalendarOpen, setReturnCalendarOpen] = useState(false);
-  
+
   const toggleStartDateCalendar = () => {
     setStartCalendarOpen(!isStartCalendarOpen);
-   
-    if(isReturnCalendarOpen) setReturnCalendarOpen(false);
-  }
+
+    if (isReturnCalendarOpen) {
+      setReturnCalendarOpen(false);
+    }
+  };
 
   const toggleReturnDateCalendar = () => {
     setReturnCalendarOpen(!isReturnCalendarOpen);
-   
-    if(isStartCalendarOpen) setStartCalendarOpen(false);
-  }
+
+    if (isStartCalendarOpen) {
+      setStartCalendarOpen(false);
+    }
+  };
 
   return (
     <CardContainer>
@@ -38,7 +42,7 @@ const BookCard = () => {
           offset
           value={startDate}
           onChange={setStartDate}
-        />} 
+        />}
       </ItemContainer>
       <LineSeparator />
       <ItemContainer>
@@ -49,7 +53,7 @@ const BookCard = () => {
         <SmallIcon>
           <FontAwesomeIcon icon={isReturnCalendarOpen ? faCaretUp : faCaretDown} />
         </SmallIcon>
-        {isReturnCalendarOpen &&  <DateCalendar
+        {isReturnCalendarOpen && <DateCalendar
           offset
           value={returnDate}
           onChange={setReturnDate}
@@ -58,7 +62,7 @@ const BookCard = () => {
       <Marginer direction='horizontal' margin='2em'/>
       <Button text='Book Your Ride' />
     </CardContainer>
-  )
-}
+  );
+};
 
-export default BookCard
+export default BookCard;

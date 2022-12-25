@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import tw from "twin.macro";
-import { SCREEN } from "../responsive";
+import styled from 'styled-components';
+import tw from 'twin.macro';
+import {SCREEN} from '../responsive';
 
 export const PageContainer = styled.div`
     ${tw`
