@@ -1,13 +1,13 @@
 import React from 'react';
-import { ListContainer, NavItem } from './styles';
-import { slide as Menu } from 'react-burger-menu';
-import { useMediaQuery } from 'react-responsive'
-import { SCREEN } from '../../containers/responsive';
+import {ListContainer, NavItem} from './styles';
+import {slide as Menu} from 'react-burger-menu';
+import {useMediaQuery} from 'react-responsive';
+import {SCREEN} from '../../containers/responsive';
 import menuStyles from './menuStyles';
 
 const NavItems = () => {
   const isMobile = useMediaQuery({maxWidth: SCREEN.sm});
-  if (isMobile) 
+  if (isMobile) {
     return (
       <Menu right styles={menuStyles}>
         <ListContainer>
@@ -26,11 +26,12 @@ const NavItems = () => {
         </ListContainer>
       </Menu>
     );
+  }
 
   return (
     <ListContainer>
       <NavItem>
-        <a style={{'textDecoration': 'none'}} href='#'>Home</a>
+        <a style={{textDecoration: 'none'}} href='#'>Home</a>
       </NavItem>
       <NavItem>
         <a href='/cars'>Cars</a>
@@ -42,7 +43,7 @@ const NavItems = () => {
         <a href='/contacts'>Contact Us</a>
       </NavItem>
     </ListContainer>
-  )
-}
+  );
+};
 
-export default NavItems
+export default NavItems;

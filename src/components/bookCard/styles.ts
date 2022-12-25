@@ -1,8 +1,8 @@
-import styled, { css } from 'styled-components';
+import styled, {css} from 'styled-components';
 import tw from 'twin.macro';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import { SCREEN } from '../../containers/responsive';
+import {SCREEN} from '../../containers/responsive';
 
 export const CardContainer = styled.div`
     box-shadow: 0 1.3px 12px -3px rgba(0, 0, 0, 0.4);

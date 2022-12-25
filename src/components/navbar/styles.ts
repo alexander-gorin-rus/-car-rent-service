@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import tw from "twin.macro";
+import styled, {css} from 'styled-components';
+import tw from 'twin.macro';
 
 export const NavbarContainer = styled.div`
     min-height: 68px;
@@ -41,9 +41,9 @@ export const NavItem = styled.li<{menu?: any}>`
         ease-in-out
         hover:text-gray-700
     `}
-    ${({ menu }) =>
-    menu &&
-    css`
+    ${({menu}) =>
+    menu
+    && css`
       ${tw`
       text-white
       text-xl

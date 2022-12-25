@@ -81,4 +81,4 @@ export const StepIcon = styled.span`
     text-red-600
     text-3xl
   `}
-`
+`;

@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import tw from "twin.macro";
+import styled from 'styled-components';
+import tw from 'twin.macro';
 
 export const LogoContainer = styled.div`
     ${tw`
@@ -28,4 +28,4 @@ export const Image = styled.div`
         width: auto;
         height: 100%;
     }
-`
+`;
