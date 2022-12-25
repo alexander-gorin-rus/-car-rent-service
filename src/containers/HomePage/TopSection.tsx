@@ -21,10 +21,10 @@ const TopSection = () => (
     </LeftContainer>
     <RightContainer>
       <BlobContainer>
-        <img src={BlobImg} />
+        <img src={BlobImg} alt='blob' />
       </BlobContainer>
       <StandaloneCar>
-        <img src={MersImg} />
+        <img src={MersImg} alt='car_image' />
       </StandaloneCar>
     </RightContainer>
   </TopSectionContainer>
