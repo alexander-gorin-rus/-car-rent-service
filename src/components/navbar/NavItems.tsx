@@ -12,7 +12,7 @@ const NavItems = () => {
       <Menu right styles={menuStyles}>
         <ListContainer>
           <NavItem menu>
-            <a href='#'>Home</a>
+            <a href='/'>Home</a>
           </NavItem>
           <NavItem menu>
             <a href='/cars'>Cars</a>
@@ -31,7 +31,7 @@ const NavItems = () => {
   return (
     <ListContainer>
       <NavItem>
-        <a style={{textDecoration: 'none'}} href='#'>Home</a>
+        <a style={{textDecoration: 'none'}} href='/'>Home</a>
       </NavItem>
       <NavItem>
         <a href='/cars'>Cars</a>
