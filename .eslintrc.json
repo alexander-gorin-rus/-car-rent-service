@@ -31,5 +31,17 @@
         "react"
     ],
     "rules": {
+        "indent": ["error", 2],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "no-console": "warn",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+      "error",
+      {"vars": "", 
+        "args": "after-used",
+        "ignoreRestSiblings": false},
+    ],
+    "no-empty": "warn",
     }
 }
