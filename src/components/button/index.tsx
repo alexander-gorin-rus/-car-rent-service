@@ -3,13 +3,13 @@ import {IButtonPprops} from '../../utils';
 import {FilledButton, OutlinedButton} from './styles';
 
 const Button = (props: IButtonPprops) => {
-  const {theme, text} = props;
+  const {theme, text, className} = props;
 
   if (theme === 'filled') {
-    return <FilledButton>{ text }</FilledButton>;
+    return <FilledButton className={className}>{ text }</FilledButton>;
   }
 
-  return <OutlinedButton>{ text }</OutlinedButton>;
+  return <OutlinedButton className={className}>{ text }</OutlinedButton>;
 };
 
 export default Button;

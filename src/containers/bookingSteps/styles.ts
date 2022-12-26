@@ -15,15 +15,6 @@ export const Container = styled.div`
   `}
 `;
 
-export const Title = styled.h2`
-  ${tw`
-    text-xl
-    lg:text-4xl
-    text-black
-    font-extrabold
-  `}
-`;
-
 export const StepsContainer = styled.div`
   ${tw`
     flex

@@ -1,8 +1,16 @@
 import React from 'react';
-import {Container, Step, StepContainer, StepDescription, StepIcon, StepTitle, StepsContainer, Title} from './styles';
+import {Container,
+  Step,
+  StepContainer,
+  StepDescription,
+  StepIcon,
+  StepTitle,
+  StepsContainer,
+} from './styles';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCarSide, faMapMarkedAlt} from '@fortawesome/free-solid-svg-icons';
 import {faCalendarAlt} from '@fortawesome/free-regular-svg-icons';
+import {Title} from '../../common-styles';
 
 const BookingSteps = () => (
   <Container>
